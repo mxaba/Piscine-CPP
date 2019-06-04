@@ -6,7 +6,7 @@
 /*   By: mxaba <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 11:24:35 by mxaba             #+#    #+#             */
-/*   Updated: 2019/06/04 12:05:30 by mxaba            ###   ########.fr       */
+/*   Updated: 2019/06/04 12:59:48 by mxaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ class	DB {
 		~DB(void);
 		int getContactsValue();
         void setContactsValue(int contacts);
-        PhoneBook getContacts(int id);
+        Phonebook getContacts(int id);
         int getFlag(void);
         void setFlag(int flg);
-        void setDB(int ad, PhoneBook db);
+        void setDB(int ad, Phonebook db);
 	private:
-        PhoneBook db[8];
+        Phonebook db[8];
         int maxSize;
         int contactsValue;
         int flag;

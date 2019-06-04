@@ -1,63 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mxaba <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 11:51:03 by mxaba             #+#    #+#             */
-/*   Updated: 2019/06/04 12:04:11 by mxaba            ###   ########.fr       */
+/*   Created: 2019/06/04 12:36:31 by mxaba             #+#    #+#             */
+/*   Updated: 2019/06/04 12:50:20 by mxaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "phonebook.hpp"
 
-#include <iostream>
-using namespace::std;
+Phonebook::Phonebook(void) {
+	this->login = "NULL";
+	return;
+}
 
-class Phonebook {
-	public:
-		Phonebook(void);
-        ~Phonebook(void);
+Phonebook::~Phonebook(void) {return;}
 
-        string getFirstName(void);
-        string getLastName(void);
-        string getNickname(void);
-        string getLogin(void);
-        string getPostalAddress(void);
-        string getEmailAddress(void);
-        string getPhoneNumber(void);
-        string getBirthdayDate(void);
-        string getFavoriteMeal(void);
-        string getUnderwearColor(void);
-        string getDarkestSecret(void);
+std::string Phonebook::getFirstName(void) {return firstName;}
+std::string Phonebook::getLastName(void) {return lastName;}
+std::string Phonebook::getNickname(void) {return nickname;}
+std::string Phonebook::getLogin(void) {return login;}
+std::string Phonebook::getPostalAddress(void) {return postalAddress;}
+std::string Phonebook::getEmailAddress(void) {return emailAddress;}
+std::string Phonebook::getPhoneNumber(void) {return phoneNumber;}
+std::string Phonebook::getBirthdayDate(void) {return birthdayDate;}
+std::string Phonebook::getFavoriteMeal(void) {return favoriteMeal;}
+std::string Phonebook::getUnderwearColor(void) {return underwearColor;}
+std::string Phonebook::getDarkestSecret(void) {return darkestSecret;}
 
-        void setFirstName(std::string st);
-        void setLastName(std::string st);
-        void setNickname(std::string st);
-        void setLogin(std::string st);
-        void setPostalAddress(std::string st);
-        void setEmailAddress(std::string st);
-        void setPhoneNumber(std::string st);
-        void setBirthdayDate(std::string st);
-        void setFavoriteMeal(std::string st);
-        void setUnderwearColor(std::string st);
-        void setDarkestSecret(std::string st);
-        void contactInfo();
+void Phonebook::setFirstName(std::string st) {this->firstName = st;}
+void Phonebook::setLastName(std::string st) {this->lastName = st;}
+void Phonebook::setNickname(std::string st) {this->nickname = st;}
+void Phonebook::setLogin(std::string st) {this->login = st;}
+void Phonebook::setPostalAddress(std::string st) {this->postalAddress = st;}
+void Phonebook::setEmailAddress(std::string st) {this->emailAddress = st;}
+void Phonebook::setPhoneNumber(std::string st) {this->phoneNumber = st;}
+void Phonebook::setBirthdayDate(std::string st) {this->birthdayDate = st;}
+void Phonebook::setFavoriteMeal(std::string st) {this->favoriteMeal = st;}
+void Phonebook::setUnderwearColor(std::string st) {this->underwearColor = st;}
+void Phonebook::setDarkestSecret(std::string st) {this->darkestSecret = st;}
 
-private:
-        string firstName;
-        string lastName;
-        string nickname;
-        string login;
-        string postalAddress;
-        string emailAddress;
-        string phoneNumber;
-        string birthdayDate;
-        string favoriteMeal;
-        string underwearColor;
-        string darkestSecret;
-};
-
-#endif
+void Phonebook::contactInfo() {
+	std::cout << "first name " << this->firstName << "\n";
+	std::cout << "last name " << this->lastName << "\n";
+	std::cout << "nickname " << this->nickname << "\n";
+	std::cout << "login " << this->login << "\n";
+	std::cout << "postal address " << this->login << "\n";
+	std::cout << "email address " << this->login << "\n";
+	std::cout << "phone number " << this->login << "\n";
+	std::cout << "birthday date " << this->login << "\n";
+	std::cout << "favorite meal " << this->login << "\n";
+	std::cout << "underwear color " << this->login << "\n";
+	std::cout << "darkest secret " << this->login << "\n";
+}
