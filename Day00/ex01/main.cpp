@@ -46,7 +46,7 @@ std::string getText() {
 
 DB addCommand(DB myDB) {
 	int counter = myDB.getContactsValue();
-	Phonebook temp;
+	PhoneBook temp;
 
 	if (myDB.getContactsValue() > 7) {
 		std::cout << "Phonebook is full." << std::endl;
@@ -103,7 +103,7 @@ void searchCommand(DB myDB) {
 	std::cout << "id        |first name|last name |nickname  |" << std::endl;
 	while (i < myDB.getContactsValue()) {
 		std::cout << i + 1 << "         |";
-		Phonebook temp = myDB.getContacts(i);
+		PhoneBook temp = myDB.getContacts(i);
 		column(temp.getFirstName());
 		column(temp.getLastName());
 		column(temp.getNickname());
@@ -122,7 +122,7 @@ void searchCommand(DB myDB) {
 		else {
 			int id  = atoi(comm);
 			if (id > 0) {
-				Phonebook temp = myDB.getContacts(id - 1);
+				PhoneBook temp = myDB.getContacts(id - 1);
 				temp.contactInfo();
 				break;
 			}
@@ -142,7 +142,7 @@ DB command(std::string com, DB myDB) {
 		searchCommand(myDB);
 	else {
 		std::cout << "Unknown command." << std::endl;
-		std::cout << "Available commands [ADD SEARCH EXIT]" << std::endl;
+		std::cout << "Available commands are [ADD SEARCH EXIT]" << std::endl;
 	}
 	return myDB;
 }
@@ -153,7 +153,7 @@ int main(void) {
 	while (1) {
 		comm = getText();
 		myDB = command(comm, myDB);
-		if (myDB.getFlag() == -1)
+		if (myDB.getFLAG() == -1)
 			return 1;
 	}
 }

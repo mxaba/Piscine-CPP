@@ -11,25 +11,24 @@
 # **************************************************************************** #
 
 NAME = phonebook
-SRC = main.cpp phonebook.cpp DB.cpp
-FLG = -Wall -Wextra -Werror
-OBJ = $(SRC:.cpp=.o)
-CC = clang++
-RM = rm -f
+SOURCES = main.cpp PhoneBook.cpp DB.cpp
+FLAGS = -Wall -Wextra -Werror
+OBJECT = $(SOURCES:.cpp=.o)
+CLANG = clang++
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(FLG) -o $(NAME) $(OBJ)
+$(NAME): $(OBJECT)
+	$(CLANG) $(FLAGS) -o $(NAME) $(OBJECT)
 
 %.o: %.cpp
-	$(CC) -c -o $@ $<
+	$(CLANG) -c -o $@ $<
 
 clean:
-	$(RM) $(OBJ)
+	rm -f $(OBJECT)
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 

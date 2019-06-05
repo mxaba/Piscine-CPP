@@ -14,23 +14,23 @@
 # define DB_HPP
 
 # include <iostream>
-# include "phonebook.cpp"
+# include "PhoneBook.hpp"
 
-class	DB {
-	public:
-		DB(void);
-		~DB(void);
-		int getContactsValue();
-        void setContactsValue(int contacts);
-        Phonebook getContacts(int id);
-        int getFlag(void);
-        void setFlag(int flg);
-        void setDB(int ad, Phonebook db);
-	private:
-        Phonebook db[8];
-        int maxSize;
-        int contactsValue;
-        int flag;
+class DB {
+public:
+	DB(void);
+	~DB(void);
+	int getContactsValue();
+	void setContactsValue(int contacts);
+	PhoneBook getContacts(int id);
+	int getFLAG(void);
+	void setFlag(int flg);
+	void setDB(int ad, PhoneBook db);
+private:
+	PhoneBook db[8];
+	int maxSize;
+	int contactsValue;
+	int flg;
 };
 
 #endif

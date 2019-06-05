@@ -14,19 +14,19 @@
 
 DB::DB(void) {
 	this->maxSize = 8;
-	this->contactsAmount = 0;
+	this->contactsValue = 0;
 	return;
 }
 
 DB::~DB(void) { return; }
 
-int DB::getContactsAmount() { return (this->contactsAmount); }
+int DB::getContactsValue() { return (this->contactsValue); }
 
-void DB::setContactsAmount(int contacts) { this->contactsAmount = contacts; }
+void DB::setContactsValue(int contacts) { this->contactsValue = contacts; }
 
-int DB::getFlg(void) { return (this->flg); }
+int DB::getFLAG(void) { return (this->flg); }
 
-void DB::setFlg(int flg) { this->flg = flg; }
+void DB::setFlag(int flg) { this->flg = flg; }
 
 PhoneBook DB::getContacts(int id) { return (this->db[id]); }
 

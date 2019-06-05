@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: mxaba <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 09:08:34 by event             #+#    #+#             */
-/*   Updated: 2019/06/04 09:29:02 by event            ###   ########.fr       */
+/*   Created: 2019/06/04 09:08:34 by mxaba             #+#    #+#             */
+/*   Updated: 2019/06/04 09:29:02 by mxaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-
-using namespace::std;
 
 int		main(int arc, char *arg[])
 {
@@ -21,7 +19,7 @@ int		main(int arc, char *arg[])
 
 	i = 1;
 	if (arc == 1)
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
 	else {
 		while ( i < arc) {
 			j = 0;
@@ -29,10 +27,10 @@ int		main(int arc, char *arg[])
 				arg[i][j] = toupper(arg[i][j]);
 				j++;
 			}
-			cout << arg[i];
+			std::cout << arg[i];
 			i++;
 		}
-		cout << "\n";
+		std::cout << "\n";
 	}
 	return (0);
 }
